@@ -4,11 +4,11 @@ from datetime import datetime, timedelta
 import multiprocessing
 import signal
 
-# Defina os endereços que você deseja pingar
+# endereços que você deseja pingar
 enderecos = {
     "dnsgoogle": "8.8.8.8",
-    "roteador1": "192.168.109.1",
-    "roteador2": "192.168.109.2"
+    "roteador1": "192.168.0.1",
+    "roteador2": "192.168.0.2"
 }
 
 # Intervalo de tempo entre os pings (em segundos)
@@ -87,7 +87,7 @@ def main():
     for processo in processos:
         processo.join()
 
-    # Mensagem final
+    
     print("Monitoramento finalizado.")
 
 if __name__ == "__main__":
